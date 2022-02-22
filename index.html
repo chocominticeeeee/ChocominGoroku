@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ちょこみん語録</title>
+    <link rel="stylesheet" href="css\style.css" />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+    <link rel="icon" href="./img/favicon.ico" />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header>
+      <!-- <img src="./img/title.gif" alt="ちょこみん語録" /> -->
+      <h1>Web版ちょこみん語録</h1>
+      <div class="headerNav">
+        <img src="./img/icon.jpg" alt="" />
+        <span>ちょこみんの学習スペース</span>
+      </div>
+      <div onclick="openHamburger()" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <!-- メイン -->
+    <main>
+      <div class="hamburgerMenu">
+        <div class="hamburgerMenuList">
+          <ul>
+            <li onclick="linkGit()">
+              <i class="ai-github-fill"></i>ちょこみんのGithub
+            </li>
+            <li onclick="linkTwitter()">
+              <i class="ai-twitter-fill"></i>Twitter
+            </li>
+            <li onclick="linkgakushu()">
+              <i class="ai-chat-edit"></i>学習スペース
+            </li>
+            <li onclick="linkCSGO()">
+              <i class="ai-double-sword"></i>CS:GO commands
+            </li>
+            <li onclick="openUploader()"><i class="ai-cloud-upload"></i>ファイルアップロード</li>
+          </ul>
+        </div>
+      </div>
+      <div class="uploaderMenuBg">
+        <div class="uploaderMenu">
+          <h3>ファイルアップローダー</h3>
+          <input type="file" id="uploadFile" accept=".mp3,.wav">
+          <button id="uploadBtn">アップロード</button>
+        </div>
+      </div>
+      <div id="tracks">
+        <div class="track" id="template">
+          <span class="trackNumber">0</span>
+          <span class="trackTitle">タイトル</span>
+          <div class="buttons">
+            <button class="playBtn">再生</button>
+            <button class="stopBtn">停止</button>
+          </div>
+          <input
+            type="range"
+            id="volume"
+            min="0"
+            max="1.0"
+            step="0.01"
+            value="0.5"
+          />
+        </div>
+      </div>
+    </main>
+    <footer>create by chocomin</footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

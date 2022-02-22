@@ -1,0 +1,222 @@
+// fonts
+// https://fonts.google.com/
+
+// Animation
+// https://coco-factory.jp/ugokuweb/
+
+// GradientGenerator
+// https://cssgradient.io/
+
+// clip-path
+// https://bennettfeely.com/clippy/
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Hachi Maru Pop", cursive;
+  font-weight: bold;
+}
+
+:root {
+  --color1: rgb(51, 32, 15);
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  background: rgb(100, 255, 180);
+  background: linear-gradient(
+    357deg,
+    rgba(100, 255, 180, 1) 0%,
+    rgba(189, 241, 240, 1) 100%
+  );
+  & header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: var(--color1);
+    & #hamburger {
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      background-color: rgb(69, 245, 201);
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      & span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: rgb(54, 28, 6);
+        margin: 3px;
+      }
+    }
+    & h1 {
+      color: white;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+    & .headerNav {
+      display: flex;
+      align-items: center;
+      margin-right: 70px;
+      & img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid white;
+        margin-right: 5px;
+      }
+      & span {
+        line-height: 50px;
+        color: white;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  & main {
+    position: relative;
+    height: 92.5vh;
+    & .hamburgerMenu {
+      display: none;
+      position: absolute;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.479);
+      width: 100%;
+      height: 100%;
+      & .hamburgerMenuList {
+        position: absolute;
+        z-index: 200;
+        width: 200px;
+        height: 100%;
+        background-color: rgb(37, 20, 0);
+        & ul {
+          & li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            color: whitesmoke;
+            border: 1px solid rgba(255, 255, 255, 0.356);
+            background-color: var(--color1);
+            &:hover {
+              background-color: rgb(26, 12, 1);
+              cursor: pointer;
+            }
+            & i {
+              color: rgb(0, 153, 255);
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+    & .uploaderMenuBg {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.349);
+      & .uploaderMenu {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 400px;
+        background-color: rgb(215, 255, 255);
+        border: 1px solid black;
+        border-radius: 10px;
+        & h3{
+          display: inline-block;
+          font-size: 1.5rem;
+          margin: 0 auto;
+          margin-top: 10px;
+          background-color: white;
+          border: 1px solid black;
+          border-radius: 100px;
+          padding: 0px 15px;
+          box-shadow: 10px 10px 10px -7px rgba(0, 0, 0, 0.521);
+        }
+        & #uploadFile{
+          margin-top: 50px;
+        }
+        & #uploadBtn{
+          display: inline-block;
+          font-size: 1rem;
+          margin: 0 auto;
+          margin-top: 10px;
+          background-color: white;
+          border: 1px solid black;
+          border-radius: 100px;
+          padding: 0px 15px;
+          box-shadow: 10px 10px 10px -7px rgba(0, 0, 0, 0.521);
+          transition: all 0.2s;
+          &:hover{
+            cursor: pointer;
+            background-color: black;
+            color: white;
+          }
+        }
+      }
+    }
+
+    & #tracks {
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      flex-wrap: wrap;
+      margin-left: 50px;
+      margin-bottom: 50px;
+      & .track {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 500px;
+        height: 50px;
+        background-color: aliceblue;
+        border: 1px solid black;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-right: 20px;
+        box-shadow: 10px 10px 10px -7px rgba(0, 0, 0, 0.521);
+        & .trackTitle {
+          overflow: hidden;
+          display: inline-block;
+          width: 200px;
+          white-space: nowrap;
+        }
+        & .buttons {
+          & button {
+            width: 50px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+  & footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    border-top: 1px solid black;
+    text-align: center;
+    background-color: var(--color1);
+  }
+}
