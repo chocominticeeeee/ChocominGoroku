@@ -46,6 +46,8 @@ const trackDataArry = [
   { title: "君センスないねぇ", path: "./sound/君センスないねぇ.mp3" },
   { title: "君センスあるねぇえ", path: "./sound/君センスあるねぇえ.mp3" },
   { title: "そうだよ", path: "./sound/そうだよ.mp3" },
+  { title: "届かない～", path: "./sound/とどかない～.mp3" },
+  { title: "ぽきぃ（L）", path: "./sound/ぽきぃ.wav" },
 ];
 
 //トラックの雛形のDOMを取得
